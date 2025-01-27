@@ -176,6 +176,12 @@ sudo netdicover -i eth0 -r 192.168.3.0/24
 - `-A`: Aggressive scan (OS detection, version detection, script scanning, and traceroute)
 - `-D` Decoy.
 - `-T<0-5>`: Timing template (Adjusts scan speed, from `0` (paranoid) to `5` (insane))
+    - `T0`: Paranoid timing, performing scans extremely slowly to avoid detection.
+    - `T1`: Sneaky timing, still slow but less extreme than T0.
+    - `T2`: Polite timing, useful for avoiding overwhelming a network.
+    - `T3`: Default timing, balanced between speed and stealth.
+    - `T4`: Aggressive timing, faster but more likely to trigger alarms.
+    - `T5`: Insane timing, very fast and noisy.
 - `-oN`: Output in normal format (Saves scan output to a file)
 - `-oX`: Output in XML format (Saves scan output in XML format)
 - `-oG`: Greppable output (Saves scan output in a grep-friendly format)
