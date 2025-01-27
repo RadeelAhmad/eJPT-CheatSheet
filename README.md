@@ -19,6 +19,12 @@ host <url>
 
 > If you see two addresses or ip addresses than that means the website is behind some kind of proxy or firewall like the cloud flare.
 
+#### WhatWeb
+
+```shell
+whatweb <url>
+```
+
 #### Whois recon:
 
 ```shell
