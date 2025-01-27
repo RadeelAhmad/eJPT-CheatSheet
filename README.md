@@ -302,6 +302,8 @@ ping -b -c 4 <broadcast IP address>
 fping -a -g <IP address>/24
 ```
 > Ping Sweep: A technique to identify active hosts in a network range by sending ICMP Echo Requests.
+> ICMP Echo Requests: Type 8
+> ICMP Echo Reply: Type 0
 
 #### SMB Commands:
 
