@@ -159,6 +159,12 @@ sudo netdicover -i eth0 -r 192.168.3.0/24
 
 > `-i` is used for the interface and `-r` is used for the ip-address range. It uses ARP to scan the hots.
 
+#### Curl
+```shell
+curl -I http://target.ine.local
+```
+> Analyze the response for server details or unusual information.
+
 #### Nmap scans:
 
 `nmap`...Then remember:
