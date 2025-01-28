@@ -184,7 +184,7 @@ sudo netdicover -i eth0 -r 192.168.3.0/24
     - `T5`: Insane timing, very fast and noisy.
 - `-oN`: Output in normal format (Saves scan output to a file)
 - `-oX`: Output in XML format (Saves scan output in XML format)
-- `-oG`: Greppable output (Saves scan output in a grep-friendly format)
+- `-oG`: Greppable output (Saves scan output in a grep-friendly format and machine-readable format)
 - `-oA`: Output in all formats (`-oN`, `-oX`, `-oG` combined)
 - `-v`: Verbose mode (Displays more information during the scan)
 - `-n`: No DNS resolution (Skips DNS resolution)
