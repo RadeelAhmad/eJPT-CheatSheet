@@ -64,6 +64,24 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 - [SSH Exploitation](#SSH-Exploitation)
 - [SMTP Server Exploitation](#SMTP-Server-Exploitation)
 - [Meterpreter Commands](#Meterpreter-Commands)
+- [Windows Post Exploitation Module](#Windows-Post-Exploitation-Module)
+- [Bypassing UAC Through Memory Injection](#Bypassing-UAC-Through-Memory-Injection)
+- [Establishing Persistence on Windows](#Establishing-Persistence-on-Windows)
+- [Enabling RDP](#Enabling-RDP)
+- [Windows Keylogging](#Windows-Keylogging)
+- [Clearing Windows Logs](#Clearing-Windows-Logs)
+- [Pivoting](#Pivoting)
+- [Linux Post Exploitation Modules](#Linux-Post-Exploitation-Modules)
+- [FUN STUFF](#FUN-STUFF)
+- [Linux Privilege Escalation: Exploiting a vulnerable program](#Linux-Privilege-Escalation:-Exploiting-a-vulnerable-program)
+- [Type of Join](#Join)
+- [Use of 'USING' Clause](#USING-clauses)
+- [Insert Value Condition](#Condition)
+- [Use of Alter](#Alter)
+- [Use of Nested Query](#Nested-Query)
+- [Type of Join](#Join)
+- [Use of 'USING' Clause](#USING-clauses)
+- [Type of Join](#Join)
 - [Use of 'USING' Clause](#USING-clauses)
 - [Type of Join](#Join)
 - [Use of 'USING' Clause](#USING-clauses)
@@ -2706,7 +2724,7 @@ run
 
 > This module will create a Reverse TCP Shell on the target system using the system's own scripting environments installed on the target.
 
-***FUN STUFF***
+#### FUN STUFF
 
 ```bash
 useradd hacker
