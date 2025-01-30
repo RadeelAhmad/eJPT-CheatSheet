@@ -1323,7 +1323,7 @@ ruby evil-winrm.rb -i 10.0.0.20 -u user -H <NTLM-HASH>
 nmap -sV <ip-address> --script=http-shellshock --sctipt-args "http-shellshock.uri=/gettime.cgi"
 ```
 
-> A shell shock vulnerability script.
+> A shell shock vulnerability script. you must have apache services
 
 ***TO EXPLOIT IT VIA BRUP SUITE WE HAVE TO PASS COMMANDS IN THE  USER AGENT HEADER AS SHOWN BELOW***
 
