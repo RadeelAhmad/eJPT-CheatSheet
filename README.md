@@ -9,6 +9,17 @@
 
 Info about eJPT certification [here](https://security.ine.com/certifications/ejpt-certification/).  
 
+## Table Of Contents
+- [Find IP address of a website](#Find-IP-address-of-a-website)
+- [WAF w00f command](#WAF-w00f-command)
+- [Display the Name with Different Style](#Display-Name)
+- [Use of Concat](#Conact)
+- [Insert Value Condition](#Condition)
+- [Use of Alter](#Alter)
+- [Use of Nested Query](#Nested-Query)
+- [Type of Join](#Join)
+- [Use of 'USING' Clause](#USING-clauses)
+
 # eJPT Cheat Sheet
 
 #### Find IP address of a website:
