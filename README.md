@@ -40,6 +40,7 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 - [Dumping hashes with Mimikatz](#Dumping-hashes-with-Mimikatz)
 - [Pass-The-Hash](#Pass-The-Hash)
 - [Shell Shock (linus exploitation)](#Shell-Shock)
+- [WMAP](#WMAP)
 - [SAMBA Commands](#SAMBA-Commands)
 - [Linux Kernel Exploits](#Linux-Kernel-Exploits)
 - [Cron Jobs](#Cron-Jobs)
@@ -1449,6 +1450,26 @@ exploit
 ```
 
 > Module for exploitation the shellshock vulnerability. 
+
+#### WMAP
+```shell
+wmap_sites -h
+```
+> to see the options
+
+```shell
+service postgresql start
+msfconsole
+load wmap
+wmap_sites -a http://<ip-target>
+wmap_targets -t http://<ip-target>
+wmap_sites -l
+wmap_run -h
+wmap_run -t
+wmap_run -e
+wmap_vuln -l (show the list of all vulnerability)
+```
+> it is web application vulnerabilty scanner
 
 #### SAMBA Commands:
 
