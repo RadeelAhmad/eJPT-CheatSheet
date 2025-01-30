@@ -999,7 +999,7 @@ exploit
 #### Exploiting MS17-010
 
 ```Shell
-nmap -sV -p 445 --script=smb-vuln-ms17-10 <ip-address>
+nmap -sV -p 445 --script=smb-vuln-ms17-010 <ip-address>
 ```
 
 > Scans the machine for MS17-010 Vulnerability. 
