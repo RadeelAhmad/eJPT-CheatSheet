@@ -1169,7 +1169,7 @@ crackmapexec winrm <ip-address> -u administrator -p /usr/share/metasploit/unix_p
 > WinRM brute force command using `crackmapexec`.
 
 ```Shell
-crackmapexec winrm <ip-address> -u administrator -p <password>
+crackmapexec winrm <ip-address> -u administrator -p <password> -x "<any command>"
 ```
 
 > This command can be used to execute arbitrary command on the windows machine.
