@@ -59,7 +59,7 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 - [SSH Enumeration](#SSH-Enumeration)
 - [SMTP Enumeration](#SMTP-Enumeration)
 - [WMAP MSF Plugin commands](#WMAP-MSF-Plugin-commands)
-- [Exploiting WinRM](#Exploiting-WinRM)
+- [Exploiting WinRM-02](#Exploiting-WinRM-02)
 - [Exploitation of Tomcat](#Exploitation-of-Tomcat)
 - [VSFTPD Exploitation](#VSFTPD-Exploitation)
 - [SAMBA Exploitation](#SAMBA-Exploitation)
@@ -2297,7 +2297,7 @@ run
 
 > This can be used to upload a file on to the specified directory.
 
-#### Exploiting WinRM
+#### Exploiting WinRM-02
 
 ***DEFAULT PORT `5986`***
 
