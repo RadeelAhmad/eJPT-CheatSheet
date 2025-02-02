@@ -1,11 +1,7 @@
 # eJPT-CheatSheet
-<p align="center">
-<img width="60%" src="./certificate.png">
-</p>
 
 > **Note**
 > These are all the notes I took while following the INE course for eJPT certification, I strongly think everything you need to pass the exam is in this 'cheatsheet'.
-
 
 Info about eJPT certification [here](https://security.ine.com/certifications/ejpt-certification/).  
 
@@ -2942,3 +2938,20 @@ sudo su
 
 > On execution, these lines will add a new entry to the /etc/sudoers file which will allow the student user to use sudo without providing any password.
 
+#### Exploiting SUID Binaries
+
+```shell
+ls -al
+```
+> if you see `s` in permissions than it give SUID permissions
+
+```shell
+strings <file-name>
+```
+> in this we wrtie a that file that have `s` permissions. see if if called some binary like greetings binary so replace the greetings binary with some other binary (say /bin/bash) which should then also get executed as root.
+
+```shell
+rm greetings
+cp /bin/bash greetings
+./<file-name>
+```
