@@ -108,6 +108,11 @@ service postgresql start
 ```
 
 ```shell
+ls -al /usr/nmap/scripts/ | grep -e "snmp"
+```
+> search a specific script 
+
+```shell
 host <url>
 ```
 
