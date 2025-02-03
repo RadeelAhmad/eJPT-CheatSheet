@@ -753,6 +753,19 @@ nmap --script http-webdav-scan --script-args http-methods.url-path=/webdav/ demo
 
 > The command uses Nmap to scan for WebDAV vulnerabilities by checking the `/webdav/` URL path using the `http-webdav-scan` script, with the path specified via script arguments.
 
+```shell
+auxiliary/scanner/http/apache_userdir_enum
+auxiliary/scanner/http/brute_dirs
+auxiliary/scanner/http/dir_scanner
+auxiliary/scanner/http/dir_listing
+auxiliary/scanner/http/http_put
+auxiliary/scanner/http/files_dir
+auxiliary/scanner/http/http_login
+auxiliary/scanner/http/http_header
+auxiliary/scanner/http/http_version
+auxiliary/scanner/http/robots_txt
+```
+
 ```msfconsole
 use auxiliary/scanner/http/http_version
 show options
