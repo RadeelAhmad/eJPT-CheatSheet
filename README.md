@@ -597,6 +597,16 @@ enum4linux -G <ip-address>
 
 > enum4linux in a Linux enum tool and in the above given command we are doing an operating system scan, second one is performing a user scan, the third one is looking for shares, and the last one lists all the user groups.
 
+```shell
+smbclient -L \\\\<IP>\\ -U <username>
+```
+> show all the shares
+
+```shell
+smbclient \\\\<IP>\\<share-name> -U <username>
+```
+> enter into account of admin in that share
+
 ```msfconsole
 use /auciliary/scanner/smb/smb_login
 show options
