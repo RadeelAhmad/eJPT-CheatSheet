@@ -14,7 +14,7 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 - [Host Discovery using Nmap](#Host-Discovery-using-Nmap)
 - [Curl](#Curl)
 - [Nmap scans & scripts](#Nmap-scans)
-- [Payload of msfconsole](#Payload)
+- [Payload of msfconsole & msfvenom](#Payload)
 - [Setup of autopwn](#Setup-of-autopwn)
 - [TCP Commands](#TCP-Commands)
 - [Ping Sweep](#Ping-Sweep)
