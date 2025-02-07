@@ -2592,7 +2592,10 @@ run
 - `screenshot:` This command can be used to click a screenshot of the **windows screen**.
 - `hashdump`: This command can be used to dump all the hashes of passwords with in the SAM DB.
 - `show_mount`: This will tell all the disks mounted with the windows user.
-- `loot`: After that you have ran some enumeration modules you can find the data saved in texts using this command 
+- `loot`: After that you have ran some enumeration modules you can find the data saved in texts using this command
+- `getprivs`: This is you to check the current privilages to perticular user.
+- `shell> net users`: This tells the users.
+- `shell> net localgroup administrators`: This tell what user is the part of administartor and can perform the task of administrator.
 
 #### Windows Post Exploitation Module:
 
