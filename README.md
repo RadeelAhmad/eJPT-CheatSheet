@@ -2575,20 +2575,23 @@ run
 #### Meterpreter Commands:
 
 - `sysinfo`: This gives us basic system info like the OS, PC Name and all
-- `get uid`: This command tells us about our permissions.
+- `getuid`: This command tells us about our permissions.
 - `help`: This gives all the commands and their details.
 - `backgroud`: This is used to put the session in background.
+- `edit <file-name>`: To edit a file
 - `kill`: This will kill the current session.
+- `checksum MD5 /bin/bash`: To check the md5 hash in bin/bash directory.
 - `search -d /dir/path -f "<file-name>"`: This command can be used to find a particular file in a directory.
 - `search -f *.exe`: This can be used to find all the `exe` file or any extension that you'll enter.
 - `download <file-name>`: This can be used to download a file.
 - `shell`: This can be used to pop the native shell of the machine.
 - `ps`: This can be used to list down all the processes.
+- `migrate <pid>`: This can be used to migrate to any current running processes.
+- `mkdir & rmdir`: Use to create and delete directory.
 - `getsystem:` This command can be used to automatically elevate the privileges of the current exploited user on **windows**.
 - `screenshot:` This command can be used to click a screenshot of the **windows screen**.
 - `hashdump`: This command can be used to dump all the hashes of passwords with in the SAM DB.
 - `show_mount`: This will tell all the disks mounted with the windows user.
-- `migrate <pid>`: This can be used to migrate to any current running processes.
 - `loot`: After that you have ran some enumeration modules you can find the data saved in texts using this command 
 
 #### Windows Post Exploitation Module:
