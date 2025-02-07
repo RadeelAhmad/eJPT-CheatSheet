@@ -78,7 +78,7 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 - [Exploiting Misconfigured Cron Jobs & exploit copy.sh](#Exploiting-Misconfigured-Cron-Jobs-&-exploit-copy.sh)
 - [Exploiting SUID Binaries](#Exploiting-SUID-Binaries)
 - [Exploit HTPP file server rejetto](#Exploit-HTPP-file-server-rejetto)
-- [Type of Join](#Join)
+- [GUI metasploit](#GUI-metasploit)
 - [Use of 'USING' Clause](#USING-clauses)
 - [Type of Join](#Join)
 - [Use of 'USING' Clause](#USING-clauses)
@@ -3079,3 +3079,12 @@ run
 ```
 > exploit the rejetto vulnerability
 
+
+#### GUI metasploit
+
+```shell
+service postgresql start
+msfconsole
+armitage
+```
+> lounch the GUI of metasploit 
