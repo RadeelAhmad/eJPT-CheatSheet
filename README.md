@@ -3107,7 +3107,7 @@ run
 ```
 - recommended
 
-> this also give us private key just copy it and exit the msfconsole. Create a new file `nano ssh_key` and add that key.
+> this also give us private key (use `loot` to see the path)just copy it and exit the msfconsole. Create a new file `nano ssh_key` and add that key.
 
 ```shell
 chmod 0400 ssh_key
