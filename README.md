@@ -2825,6 +2825,7 @@ nmap -sV -sS -p 1234 localhost
 #### Linux Post Exploitation Modules
 
 - `cat /etc/passwd`: This command lists out all the users and service accounts on the machine and needs `root` privileges to execute.
+- `getuid`: If uid is 0 it mean root user
 - `groups <username>`: This will tell you which user group the entered username belongs to.
 - `bin/bash -i`: This command can be used to get a bash shell after meterpreter session is opened.
 - `cat /etc/*issue`: This will tell you the release version of the machine.
