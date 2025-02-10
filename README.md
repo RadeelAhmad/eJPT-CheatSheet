@@ -102,6 +102,19 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 
 # eJPT Cheat Sheet
 
+
+```url
+https://www.exploit-db.com/
+https://www.rapid7.com/db/
+```
+> This URL is use to search exploit publicly
+
+- Also use `searchsploit` for offline search of exploit
+
+```shell
+python -m SimpleHTTPServer 80
+```
+
 #### Find IP address of a website:
 
 
@@ -3176,4 +3189,7 @@ armitage
 
 
 
+#### Fixing Exploits
+```shell
 
+```
