@@ -25,7 +25,7 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 - [MYSQL Commands](#MYSQL-Commands)
 - [Exploiting Microsoft IIA WebDAV](#Exploiting-Microsoft-IIA-WebDAV)
 - [SMB Exploitation](#SMB-Exploitation)
-- [Exploiting MS17-010](#Exploiting-MS17-010)
+- [Exploiting MS17-010 & autoblue](#Exploiting-MS17-010)
 - [RDP Exploitation](#RDP-Exploitation)
 - [Exploit Blue Keep](#Exploit-Blue-Keep)
 - [Explpoit Bad Blue](#Exploit-Bad-Blue)
@@ -37,7 +37,7 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 - [Searching for Passwords In Windows Configuration Files](#Searching-for-Passwords-In-Windows-Configuration-Files)
 - [Dumping hashes with Mimikatz](#Dumping-hashes-with-Mimikatz)
 - [Pass-The-Hash](#Pass-The-Hash)
-- [Shell Shock (linus exploitation)](#Shell-Shock)
+- [Shell Shock (linus exploitation & .cgi)](#Shell-Shock)
 - [WMAP](#WMAP)
 - [SAMBA Commands](#SAMBA-Commands)
 - [Linux Kernel Exploits](#Linux-Kernel-Exploits)
@@ -393,6 +393,11 @@ nmap --script log4shell.nse --script-args log4shell.callback-server=172.17.42.1:
 
 > Log4J Discovery script
 
+
+```shell
+nmap -sV --script=banner <target-IP>
+```
+> This is use for banner grabbing
 
 #### Payload:
 
@@ -3167,4 +3172,8 @@ service postgresql start
 msfconsole
 armitage
 ```
-> lounch the GUI of metasploit 
+> lounch the GUI of metasploit
+
+
+
+
