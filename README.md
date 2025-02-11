@@ -115,6 +115,9 @@ https://www.rapid7.com/db/
 python -m SimpleHTTPServer 80
 ```
 
+```shell
+dirsearch -u linkvortex.htb -t 50 -i 200
+```
 #### Find IP address of a website:
 
 
