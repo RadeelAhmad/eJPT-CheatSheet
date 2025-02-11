@@ -74,7 +74,7 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 - [FUN STUFF](#FUN-STUFF)
 - [Linux Privilege Escalation: Exploiting a vulnerable program](#Linux-Privilege-Escalation:-Exploiting-a-vulnerable-program)
 - [Linux Password Hash (exploit-ProFTPD)](#Linux-Password-Hash-(exploit-ProFTPD))
-- [Linux Privilege Escalation](#Linux-Privilege-Escalation)
+- [*Linux Privilege Escalation](#Linux-Privilege-Escalation)
 - [Establishing Persistence On Linux](#Establishing-Persistence-On-Linux)
 - [Exploiting Misconfigured Cron Jobs & exploit copy.sh](#Exploiting-Misconfigured-Cron-Jobs-&-exploit-copy.sh)
 - [Exploiting SUID Binaries](#Exploiting-SUID-Binaries)
