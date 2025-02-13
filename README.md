@@ -118,6 +118,10 @@ python -m SimpleHTTPServer 80
 ```shell
 dirsearch -u linkvortex.htb -t 50 -i 200
 ```
+
+```shell
+dirsearch -u underpass.htb/daloradius/app -t 50 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt 
+```
 #### Find IP address of a website:
 
 
