@@ -703,6 +703,13 @@ hydra -l <user-name> -P /usr/share/wordlists/rockyou.txt <ip-address> smb
 
 > This hydra command is used brute force a particular SMB user.
 
+```shell
+crackmapexec smb <dc-ip> -u <user> -p <password> --rid-brute
+netexec smb <dc-ip> -u <user> -p <password> --users --rid-brute
+```
+> for no cred enumeration use username as “guest” and password as blank
+
+
 
 #### FTP Commands:
 
