@@ -709,7 +709,10 @@ netexec smb <dc-ip> -u <user> -p <password> --users --rid-brute
 ```
 > for no cred enumeration use username as “guest” and password as blank
 
-
+```shell
+evil-winrm -i <ip> -u <user> -p '<pass>'
+```
+> evil-winrm to login
 
 #### FTP Commands:
 
