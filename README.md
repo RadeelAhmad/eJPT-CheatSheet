@@ -72,7 +72,7 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 - [Pivoting](#Pivoting)
 - [Linux Post Exploitation Modules](#Linux-Post-Exploitation-Modules)
 - [FUN STUFF](#FUN-STUFF)
-- [Linux Privilege Escalation: Exploiting a vulnerable program](#Linux-Privilege-Escalation-Exploiting-a-vulnerable-program)
+- [Linux Privilege Escalation: Exploiting a vulnerable program](#Linux-Privilege-Escalation-Exploiting-a-vulnerable-program-chkrootkkit)
 - [Linux Password Hash (exploit-ProFTPD)](#Linux-Password-Hash-exploit-ProFTPD)
 - [*Linux Privilege Escalation](#Linux-Privilege-Escalation)
 - [Establishing Persistence On Linux](#Establishing-Persistence-On-Linux)
