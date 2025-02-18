@@ -108,6 +108,7 @@ dirsearch -u underpass.htb/daloradius/app -t 50 -w /usr/share/wordlists/dirbuste
 
 ```shell
 fuf -u http://linkvortex.htb/ -w ./fuzzDicts/subdomainDicts/main.txt -H "Host:FUZZ.linkvortex.htb"  -mc 200
+ffuf -w /home/naahl/Desktop/subdomain.txt -u http://titanic.htb/ -H  "Host:FUZZ.titanic.htb" -fc 301
 ```
 #### Find IP address of a website:
 
