@@ -82,23 +82,6 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 - [GUI metasploit](#GUI-metasploit)
 - [Netcat & blind shell](#Netcat--blind-shell)
 - [Exploit PHP](#Exploit-PHP)
-- [Use of 'USING' Clause](#USING-clauses)
-- [Type of Join](#Join)
-- [Use of 'USING' Clause](#USING-clauses)
-- [Insert Value Condition](#Condition)
-- [Use of Alter](#Alter)
-- [Use of Nested Query](#Nested-Query)
-- [Type of Join](#Join)
-- [Use of 'USING' Clause](#USING-clauses)
-- [Type of Join](#Join)
-- [Use of 'USING' Clause](#USING-clauses)
-- [Type of Join](#Join)
-- [Use of 'USING' Clause](#USING-clauses)
-- [Insert Value Condition](#Condition)
-- [Use of Alter](#Alter)
-- [Use of Nested Query](#Nested-Query)
-- [Type of Join](#Join)
-- [Use of 'USING' Clause](#USING-clauses)
 
 # eJPT Cheat Sheet
 
