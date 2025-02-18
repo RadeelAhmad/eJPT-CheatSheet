@@ -76,7 +76,7 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 - [Linux Password Hash (exploit-ProFTPD)](#Linux-Password-Hash-exploit-ProFTPD)
 - [*Linux Privilege Escalation](#Linux-Privilege-Escalation)
 - [Establishing Persistence On Linux](#Establishing-Persistence-On-Linux)
-- [Exploiting Misconfigured Cron Jobs & exploit copy.sh](#Exploiting-Misconfigured-Cron-Jobs--exploit-copy.sh)
+- [Exploiting Misconfigured Cron Jobs & exploit copy.sh](#Exploiting-Misconfigured-Cron-Jobs-exploit-copy.sh)
 - [Exploiting SUID Binaries](#Exploiting-SUID-Binaries)
 - [Exploit HTPP file server rejetto](#Exploit-HTPP-file-server-rejetto)
 - [GUI metasploit](#GUI-metasploit)
