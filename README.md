@@ -105,6 +105,10 @@ dirsearch -u linkvortex.htb -t 50 -i 200
 ```shell
 dirsearch -u underpass.htb/daloradius/app -t 50 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt 
 ```
+
+```shell
+fuf -u http://linkvortex.htb/ -w ./fuzzDicts/subdomainDicts/main.txt -H "Host:FUZZ.linkvortex.htb"  -mc 200
+```
 #### Find IP address of a website:
 
 
