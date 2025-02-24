@@ -116,6 +116,11 @@ find / -writable -type d 2>/dev/null
 ```
 > find all writable directories on the box
 
+```shell
+ln -s /root/root.txt root.txt
+```
+> create a symlink
+
 #### Find IP address of a website:
 
 
