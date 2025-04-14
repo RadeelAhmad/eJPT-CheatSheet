@@ -109,6 +109,8 @@ dirsearch -u underpass.htb/daloradius/app -t 50 -w /usr/share/wordlists/dirbuste
 ```shell
 fuf -u http://linkvortex.htb/ -w ./fuzzDicts/subdomainDicts/main.txt -H "Host:FUZZ.linkvortex.htb"  -mc 200
 ffuf -w /home/naahl/Desktop/subdomain.txt -u http://titanic.htb/ -H  "Host:FUZZ.titanic.htb" -fc 301
+feroxbuster -u http://nocturnal.htb/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt
+ffuf -w /home/naahl/Desktop/xato-net-10-million-usernames-dup.txt -u 'http://nocturnal.htb/view.php?username=FUZZ&file=bad.odt' -fw 1167
 ```
 
 ```shell
