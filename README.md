@@ -116,6 +116,7 @@ fuf -u http://linkvortex.htb/ -w ./fuzzDicts/subdomainDicts/main.txt -H "Host:FU
 ffuf -w /home/naahl/Desktop/subdomain.txt -u http://titanic.htb/ -H  "Host:FUZZ.titanic.htb" -fc 301
 feroxbuster -u http://nocturnal.htb/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt
 ffuf -w /home/naahl/Desktop/xato-net-10-million-usernames-dup.txt -u 'http://nocturnal.htb/view.php?username=FUZZ&file=bad.odt' -fw 1167
+ffuf -c -w /home/naahl/Desktop/wordlist.txt -u "http://10.13.37.11/backups/backup_2025042015FUZZ.zip" -mc 200 -fc 40
 ```
 
 list of internal service running
