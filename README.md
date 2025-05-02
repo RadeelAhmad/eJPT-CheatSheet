@@ -119,6 +119,10 @@ dirsearch -u underpass.htb/daloradius/app -t 50 -w /usr/share/wordlists/dirbuste
 ```
 
 ```shell
+git-dumper http://10.13.37.14/.git/ dump_new
+```
+
+```shell
 fuf -u http://linkvortex.htb/ -w ./fuzzDicts/subdomainDicts/main.txt -H "Host:FUZZ.linkvortex.htb"  -mc 200
 ffuf -w /home/naahl/Desktop/subdomain.txt -u http://titanic.htb/ -H  "Host:FUZZ.titanic.htb" -fc 301
 feroxbuster -u http://nocturnal.htb/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt
