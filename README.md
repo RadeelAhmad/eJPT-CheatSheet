@@ -85,6 +85,10 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 
 # eJPT Cheat Sheet
 
+bloodhound
+```shell
+bloodhound-python --dns-tcp -ns 10.10.11.174 -d support.htb -u 'support' -p 'Ironside47pleasure40Watchful' -c all
+```
 
  nc
 ```shell
