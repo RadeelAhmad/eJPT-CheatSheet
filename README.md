@@ -87,7 +87,7 @@ Info about eJPT certification [here](https://security.ine.com/certifications/ejp
 
 bloodhound
 ```shell
-bloodhound-python --dns-tcp -ns 10.10.11.174 -d support.htb -u 'support' -p 'Ironside47pleasure40Watchful' -c all
+bloodhound-python -dc-ip 10.10.11.174 -d support.htb -u 'support' -p 'Ironside47pleasure40Watchful' -c all
 ```
 
  nc
